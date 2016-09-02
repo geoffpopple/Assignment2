@@ -16,12 +16,12 @@ namespace Assignment2
     // [System.Web.Script.Services.ScriptService]
     public class ZodiacName : System.Web.Services.WebService
     {
-      private Dictionary<String, String> zodiac;
+      private readonly Dictionary<String, String> _zodiac;
         public ZodiacName()
 
         {
             //create a dictionay of KV pairs to store our data
-            zodiac = new Dictionary<String, String>()
+            _zodiac = new Dictionary<String, String>()
             {
                 { "aries","03/21-04/20"},
                 { "taurus","04/21-05/21"},
@@ -44,13 +44,11 @@ namespace Assignment2
             string zodiacDate= "Not Found";
             //Iterate through the dictionary and match the sign with the key
             //convert the input to lowercaser to match the distionary key.
-            foreach (KeyValuePair<String, String> entry in zodiac)
+            foreach (KeyValuePair<String, String> entry in _zodiac)
             {
-                if (entry.Key.ToLower() == sign.ToLower())
-                {
-                    zodiacDate = entry.Value;
-                    break;
-                }
+                if (!String.Equals(entry.Key, sign, StringComparison.CurrentCultureIgnoreCase)) continue;
+                zodiacDate = entry.Value;
+                break;
             }
             return zodiacDate;
         }

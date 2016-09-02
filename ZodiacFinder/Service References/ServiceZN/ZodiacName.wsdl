@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://example.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://example.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://example.com/">
+      <s:element name="getZodiacDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sign" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getZodiacDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getZodiacDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getZodiacDateSoapIn">
+    <wsdl:part name="parameters" element="tns:getZodiacDate" />
+  </wsdl:message>
+  <wsdl:message name="getZodiacDateSoapOut">
+    <wsdl:part name="parameters" element="tns:getZodiacDateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ZodiacNameSoap">
+    <wsdl:operation name="getZodiacDate">
+      <wsdl:input message="tns:getZodiacDateSoapIn" />
+      <wsdl:output message="tns:getZodiacDateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ZodiacNameSoap" type="tns:ZodiacNameSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getZodiacDate">
+      <soap:operation soapAction="http://example.com/getZodiacDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZodiacNameSoap12" type="tns:ZodiacNameSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getZodiacDate">
+      <soap12:operation soapAction="http://example.com/getZodiacDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZodiacName">
+    <wsdl:port name="ZodiacNameSoap" binding="tns:ZodiacNameSoap">
+      <soap:address location="http://localhost:53351/ZodiacName.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ZodiacNameSoap12" binding="tns:ZodiacNameSoap12">
+      <soap12:address location="http://localhost:53351/ZodiacName.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
