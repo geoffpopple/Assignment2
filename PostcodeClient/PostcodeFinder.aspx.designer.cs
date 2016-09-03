@@ -40,13 +40,13 @@ namespace PostcodeClient {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// postcodeList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList postcodeList;
         
         /// <summary>
         /// btnShowPostcode control.
@@ -58,13 +58,13 @@ namespace PostcodeClient {
         protected global::System.Web.UI.WebControls.Button btnShowPostcode;
         
         /// <summary>
-        /// Label1 control.
+        /// lblPostcode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblPostcode;
         
         /// <summary>
         /// lblDTNow control.

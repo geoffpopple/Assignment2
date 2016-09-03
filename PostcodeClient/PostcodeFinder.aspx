@@ -15,11 +15,11 @@
         </asp:ScriptManager>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="postcodeList" runat="server">
                 </asp:DropDownList>
                 <asp:Button ID="btnShowPostcode" runat="server" OnClick="btnShowPostcode_Click" Text="Show Postcode" />
                 <br />
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblPostcode" runat="server" Text="Label"></asp:Label>
             </ContentTemplate>
         </asp:UpdatePanel>
     

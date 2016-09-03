@@ -99,7 +99,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="PostCodeFinder.asmx" />
-    <Content Include="Postcodes.txt" />
     <Content Include="ZodiacDate.asmx" />
     <Content Include="ZodiacName.asmx" />
     <None Include="Web.Debug.config">

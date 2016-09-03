@@ -7,7 +7,7 @@ using System.Web.SessionState;
 
 namespace Client
 {
-    public class Global : System.Web.HttpApplication
+    public class Global : HttpApplication
     {
         protected void Application_Start(object sender, EventArgs e)
         {
