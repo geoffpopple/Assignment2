@@ -12,7 +12,7 @@ namespace PostcodeClient
             lblDTNow.Text = $"{DateTime.Now:HH:mm:ss tt}";
             //load the dropdownlist with the key values from the text file.
             var fileData =
-                File.ReadAllLines(@"C:\Users\geoffpopple\Source\\Repos\Assignment2\Assignment2\\Postcodes.txt");
+                File.ReadAllLines(@"C:\Users\geoffpopple\Source\Repos\Assignment2\Assignment2\Postcodes.txt");
             foreach (var line in fileData)
             {
                 var tokens = line.Split(',');
