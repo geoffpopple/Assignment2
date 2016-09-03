@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Net;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+
 
 namespace PostcodeClient
 {
     public partial class PostcodeFinder : Page
     {
+        private const string PostcodePath = @"C:\Users\geoffpopple\Source\Repos\Assignment2\Assignment2\Postcodes.txt";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //set the current time on the form when the page loads
@@ -19,7 +17,7 @@ namespace PostcodeClient
             try
             {
                 var lineOfContents =
-                        File.ReadAllLines(@"C:\Users\geoffpopple\Source\Repos\Assignment2\Assignment2\Postcodes.txt");
+                        File.ReadAllLines(PostcodePath);
                 foreach (var line in lineOfContents)
                 {
                     var tokens = line.Split(',');

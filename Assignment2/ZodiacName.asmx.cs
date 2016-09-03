@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Services;
 
 namespace Assignment2
@@ -14,7 +12,7 @@ namespace Assignment2
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
-    public class ZodiacName : System.Web.Services.WebService
+    public class ZodiacName : WebService
     {
       private readonly Dictionary<String, String> _zodiac;
         public ZodiacName()
@@ -39,11 +37,11 @@ namespace Assignment2
         }
 
         [WebMethod]
-        public string getZodiacDate(String sign)
+        public string GetZodiacDate(String sign)
         {
             string zodiacDate= "Not Found";
             //Iterate through the dictionary and match the sign with the key
-            //convert the input to lowercaser to match the distionary key.
+            //ignore the case of the input during comparison such that leo==Leo.
             foreach (KeyValuePair<String, String> entry in _zodiac)
             {
                 if (!String.Equals(entry.Key, sign, StringComparison.CurrentCultureIgnoreCase)) continue;
