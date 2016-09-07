@@ -16,26 +16,26 @@ namespace Client.ServiceReference1 {
     public interface ZodiacNameSoap {
         
         // CODEGEN: Generating message contract since element name sign from namespace http://example.com/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://example.com/getZodiacDate", ReplyAction="*")]
-        Client.ServiceReference1.getZodiacDateResponse getZodiacDate(Client.ServiceReference1.getZodiacDateRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://example.com/GetZodiacDate", ReplyAction="*")]
+        Client.ServiceReference1.GetZodiacDateResponse GetZodiacDate(Client.ServiceReference1.GetZodiacDateRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://example.com/getZodiacDate", ReplyAction="*")]
-        System.Threading.Tasks.Task<Client.ServiceReference1.getZodiacDateResponse> getZodiacDateAsync(Client.ServiceReference1.getZodiacDateRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://example.com/GetZodiacDate", ReplyAction="*")]
+        System.Threading.Tasks.Task<Client.ServiceReference1.GetZodiacDateResponse> GetZodiacDateAsync(Client.ServiceReference1.GetZodiacDateRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getZodiacDateRequest {
+    public partial class GetZodiacDateRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getZodiacDate", Namespace="http://example.com/", Order=0)]
-        public Client.ServiceReference1.getZodiacDateRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetZodiacDate", Namespace="http://example.com/", Order=0)]
+        public Client.ServiceReference1.GetZodiacDateRequestBody Body;
         
-        public getZodiacDateRequest() {
+        public GetZodiacDateRequest() {
         }
         
-        public getZodiacDateRequest(Client.ServiceReference1.getZodiacDateRequestBody Body) {
+        public GetZodiacDateRequest(Client.ServiceReference1.GetZodiacDateRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -44,15 +44,15 @@ namespace Client.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://example.com/")]
-    public partial class getZodiacDateRequestBody {
+    public partial class GetZodiacDateRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public string sign;
         
-        public getZodiacDateRequestBody() {
+        public GetZodiacDateRequestBody() {
         }
         
-        public getZodiacDateRequestBody(string sign) {
+        public GetZodiacDateRequestBody(string sign) {
             this.sign = sign;
         }
     }
@@ -61,15 +61,15 @@ namespace Client.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getZodiacDateResponse {
+    public partial class GetZodiacDateResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getZodiacDateResponse", Namespace="http://example.com/", Order=0)]
-        public Client.ServiceReference1.getZodiacDateResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetZodiacDateResponse", Namespace="http://example.com/", Order=0)]
+        public Client.ServiceReference1.GetZodiacDateResponseBody Body;
         
-        public getZodiacDateResponse() {
+        public GetZodiacDateResponse() {
         }
         
-        public getZodiacDateResponse(Client.ServiceReference1.getZodiacDateResponseBody Body) {
+        public GetZodiacDateResponse(Client.ServiceReference1.GetZodiacDateResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -78,16 +78,16 @@ namespace Client.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://example.com/")]
-    public partial class getZodiacDateResponseBody {
+    public partial class GetZodiacDateResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string getZodiacDateResult;
+        public string GetZodiacDateResult;
         
-        public getZodiacDateResponseBody() {
+        public GetZodiacDateResponseBody() {
         }
         
-        public getZodiacDateResponseBody(string getZodiacDateResult) {
-            this.getZodiacDateResult = getZodiacDateResult;
+        public GetZodiacDateResponseBody(string GetZodiacDateResult) {
+            this.GetZodiacDateResult = GetZodiacDateResult;
         }
     }
     
@@ -119,28 +119,28 @@ namespace Client.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Client.ServiceReference1.getZodiacDateResponse Client.ServiceReference1.ZodiacNameSoap.getZodiacDate(Client.ServiceReference1.getZodiacDateRequest request) {
-            return base.Channel.getZodiacDate(request);
+        Client.ServiceReference1.GetZodiacDateResponse Client.ServiceReference1.ZodiacNameSoap.GetZodiacDate(Client.ServiceReference1.GetZodiacDateRequest request) {
+            return base.Channel.GetZodiacDate(request);
         }
         
-        public string getZodiacDate(string sign) {
-            Client.ServiceReference1.getZodiacDateRequest inValue = new Client.ServiceReference1.getZodiacDateRequest();
-            inValue.Body = new Client.ServiceReference1.getZodiacDateRequestBody();
+        public string GetZodiacDate(string sign) {
+            Client.ServiceReference1.GetZodiacDateRequest inValue = new Client.ServiceReference1.GetZodiacDateRequest();
+            inValue.Body = new Client.ServiceReference1.GetZodiacDateRequestBody();
             inValue.Body.sign = sign;
-            Client.ServiceReference1.getZodiacDateResponse retVal = ((Client.ServiceReference1.ZodiacNameSoap)(this)).getZodiacDate(inValue);
-            return retVal.Body.getZodiacDateResult;
+            Client.ServiceReference1.GetZodiacDateResponse retVal = ((Client.ServiceReference1.ZodiacNameSoap)(this)).GetZodiacDate(inValue);
+            return retVal.Body.GetZodiacDateResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Client.ServiceReference1.getZodiacDateResponse> Client.ServiceReference1.ZodiacNameSoap.getZodiacDateAsync(Client.ServiceReference1.getZodiacDateRequest request) {
-            return base.Channel.getZodiacDateAsync(request);
+        System.Threading.Tasks.Task<Client.ServiceReference1.GetZodiacDateResponse> Client.ServiceReference1.ZodiacNameSoap.GetZodiacDateAsync(Client.ServiceReference1.GetZodiacDateRequest request) {
+            return base.Channel.GetZodiacDateAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Client.ServiceReference1.getZodiacDateResponse> getZodiacDateAsync(string sign) {
-            Client.ServiceReference1.getZodiacDateRequest inValue = new Client.ServiceReference1.getZodiacDateRequest();
-            inValue.Body = new Client.ServiceReference1.getZodiacDateRequestBody();
+        public System.Threading.Tasks.Task<Client.ServiceReference1.GetZodiacDateResponse> GetZodiacDateAsync(string sign) {
+            Client.ServiceReference1.GetZodiacDateRequest inValue = new Client.ServiceReference1.GetZodiacDateRequest();
+            inValue.Body = new Client.ServiceReference1.GetZodiacDateRequestBody();
             inValue.Body.sign = sign;
-            return ((Client.ServiceReference1.ZodiacNameSoap)(this)).getZodiacDateAsync(inValue);
+            return ((Client.ServiceReference1.ZodiacNameSoap)(this)).GetZodiacDateAsync(inValue);
         }
     }
 }

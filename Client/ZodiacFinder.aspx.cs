@@ -7,7 +7,7 @@ namespace Client
         protected void Button1_Click(object sender, EventArgs e)
         {
             var zod=new ServiceReference1.ZodiacNameSoapClient();
-            TextBox2.Text = zod.getZodiacDate(TextBox1.Text);
+            TextBox2.Text = zod.GetZodiacDate(TextBox1.Text);
         }
 
         protected void Button2_Click(object sender, EventArgs e)

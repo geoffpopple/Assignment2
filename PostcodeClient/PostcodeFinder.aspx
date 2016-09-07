@@ -15,7 +15,7 @@
         </asp:ScriptManager>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
-                <asp:DropDownList ID="DropDownList1" runat="server" OnTextChanged="DropDownList1_TextChanged">
+                <asp:DropDownList ID="DropDownList1" runat="server">
                 </asp:DropDownList>
                 <asp:Button ID="btnShowPostcode" runat="server" OnClick="btnShowPostcode_Click" Text="Show Postcode" />
                 <br />
